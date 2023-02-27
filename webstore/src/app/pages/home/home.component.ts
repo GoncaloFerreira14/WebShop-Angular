@@ -5,10 +5,18 @@ import { Component, OnInit } from '@angular/core';
   templateUrl:'./home.component.html'
 })
 export class HomeComponent implements OnInit {
-
+  cols = 3;
+  category:string | undefined;
   constructor() { }
 
   ngOnInit(): void {
   }
 
+  onColumnsUpdated(colsNumber: number):void{
+    this.cols = colsNumber;
+  }
+
+  onShowCategory(newCategory:string):void{
+    this.category = newCategory;
+  }
 }
